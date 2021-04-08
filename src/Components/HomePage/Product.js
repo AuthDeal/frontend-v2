@@ -17,7 +17,7 @@ function Product() {
 
             <Meta title={<span>Casio label writer disc title printer<br/>CW-E60 16039 from JAPAN</span>}
                   description={<Rate disabled defaultValue={4}/>}/>
-          </Card>,
+          </Card>
         </div>
       </Link>
   );

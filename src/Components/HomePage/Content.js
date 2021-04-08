@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Product from "./Product";
+import LoadMoreList from "./LoadMoreList"
 
 function Content() {
 
   return (
       <div style={{textAlign: 'center'}}>
-        <Product/>
-        <Product/>
-        <Product/>
+        <LoadMoreList />
       </div>
   );
 
