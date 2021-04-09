@@ -6,7 +6,8 @@ import {List, Avatar, Button, Skeleton, Image, Card, Rate} from 'antd';
 import request from 'reqwest';
 
 const count = 20;
-const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat&noinfo`;
+// const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat&noinfo`;
+const fakeDataUrl = 'http://localhost:8080/items';
 
 
 
@@ -22,8 +23,8 @@ export default class LoadMoreList extends React.Component {
     this.getData(res => {
       this.setState({
         initLoading: false,
-        data: res.results,
-        list: res.results,
+        data: res,
+        list: res,
       });
     });
   }
@@ -44,10 +45,10 @@ export default class LoadMoreList extends React.Component {
     this.setState({
       loading: true,
       list: this.state.data.concat(
-          [...new Array(count)].map(() => ({loading: true, name: {}}))),
+          [...new Array(count)].map(() => ({loading: true, itemName: {}}))),
     });
     this.getData(res => {
-      const data = this.state.data.concat(res.results);
+      const data = this.state.data.concat(res);
       this.setState(
           {
             data,
@@ -99,15 +100,16 @@ export default class LoadMoreList extends React.Component {
             renderItem={item => (
                   <Skeleton avatar title={false} loading={item.loading} active>
                     <Card hoverable
-                        title={"Product description: " + item.name.last + " " + item.name.first}
+                        title={"Product: " + item.itemName + " " }
                     >
                       <Image
                           width={200}
-                          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                          src={item.picture}
+                          // src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
                       />
-                      <p> </p>
-                      <h2>Price: $ 199.99</h2>
-                      <Rate disabled defaultValue={4}/>
+                      <p></p>
+                      <h2>Price: $ {item.price}</h2>
+                      <Rate disabled defaultValue={item.rate}/>
                     </Card>
                   </Skeleton>
             )}
