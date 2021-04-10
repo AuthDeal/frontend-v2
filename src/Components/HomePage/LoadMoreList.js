@@ -109,7 +109,7 @@ export default class LoadMoreList extends React.Component {
                       />
                       <p></p>
                       <h2>Price: $ {item.price}</h2>
-                      <Rate disabled defaultValue={item.rate}/>
+                      <Rate disabled defaultValue={item.users.rate}/>
                     </Card>
                   </Skeleton>
             )}
