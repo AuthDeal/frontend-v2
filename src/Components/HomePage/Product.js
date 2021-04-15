@@ -6,7 +6,7 @@ const {Meta} = Card;
 
 function Product() {
   return (
-      <Link to="/ItemPage/" style={{color: 'black'}}>
+      <Link to="/ShowItem/" style={{color: 'black'}}>
         <div>
           <Card
               hoverable

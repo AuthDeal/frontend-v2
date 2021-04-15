@@ -4,6 +4,7 @@ import 'antd/dist/antd.css';
 import './../../Style/LoadMoreList.css';
 import {List, Avatar, Button, Skeleton, Image, Card, Rate} from 'antd';
 import request from 'reqwest';
+import {Link} from "react-router-dom";
 
 const count = 20;
 // const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat&noinfo`;
@@ -99,18 +100,21 @@ export default class LoadMoreList extends React.Component {
             }}
             renderItem={item => (
                   <Skeleton avatar title={false} loading={item.loading} active>
-                    <Card hoverable
-                        title={"Product: " + item.itemName + " " }
-                    >
-                      <Image
-                          width={200}
-                          src={item.picture}
-                          // src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                      />
-                      <p></p>
-                      <h2>Price: $ {item.price}</h2>
-                      <Rate disabled defaultValue={item.users.rate}/>
-                    </Card>
+                    <Link to="/item" style={{color:'black'}}>
+                      <Card hoverable
+                            title={"Product: " + item.itemName + " " }
+                            style={{margin:"15px"}}
+
+                      >
+                        <Image
+                            width={200}
+                            src={item.picture}
+                            // src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                        />
+                        <h2>Price: $ {item.price}</h2>
+                        <Rate disabled defaultValue={item.users.rate}/>
+                      </Card>
+                    </Link>
                   </Skeleton>
             )}
         />

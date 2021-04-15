@@ -8,6 +8,7 @@ import HomePage from "./Routes/HomePage";
 import LoginPage from "./Routes/LoginPage";
 import SignUpPage from "./Routes/SignUpPage";
 import PostItemPage from "./Routes/PostItemPage";
+import ItemPage from "./Routes/ItemPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" component={LoginPage} />
           <Route path="/signup" component={SignUpPage} />
           <Route path="/sell" component={PostItemPage} />
+          <Route path="/item" component={ItemPage} />
           <Footer />
         </div>
       </Router>
@@ -35,7 +37,7 @@ function App() {
   //     <Route path="/HomePage" component={HomePage} />
   //     <Route path="/Product" component={Product} />
   //     <Route path="/AllItemsPage" component={AllItemsPage} />
-  //     <Route path="/ItemPage" component={ItemPage} />
+  //     <Route path="/ShowItem" component={ShowItem} />
   //     <Route path="/AllOrders" component={AllOrders} />
   //     <Route path="/OrderDetailPage" component={OrderDetailPage} />
   //     <Route path="/RatingPage" component={RatingPage} />

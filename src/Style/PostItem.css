@@ -1,0 +1,30 @@
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 300px;
+  /* Form outline */
+  padding: 1em;
+  /*border: 1px solid #CCC;*/
+  /*border-radius: 1em;*/
+}
+
+label {
+  color: aliceblue;
+  width: 200px;
+}
+
+.itemInfo {
+  text-align: right;
+}
+
+input {
+  width: 150px;
+}
+
+select {
+  width: 150px;
+}
+.createProduct {
+  position: center;
+  text-align: center;
+}
