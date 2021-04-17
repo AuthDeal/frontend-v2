@@ -40,6 +40,7 @@
   "devDependencies": {
     "ant-design-pro": "^2.3.2",
     "axios": "^0.21.1",
+    "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "reqwest": "^2.0.5"
   }

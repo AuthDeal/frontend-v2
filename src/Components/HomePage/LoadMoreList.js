@@ -6,7 +6,7 @@ import {List, Avatar, Button, Skeleton, Image, Card, Rate} from 'antd';
 import request from 'reqwest';
 import {Link} from "react-router-dom";
 
-const count = 20;
+const count = 21;
 // const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat&noinfo`;
 const fakeDataUrl = 'http://localhost:8080/items';
 

@@ -25,9 +25,9 @@ export default class PostItem extends Component {
     console.log(this.state)
     alert(` 
       ____Your Details____\n 
-      Email : ${itemName} 
-      Age : ${itemCondition} 
-      Phone No : ${description} 
+      Item Name : ${itemName} 
+      Item Condition : ${itemCondition} 
+      Description : ${description} 
     `)
 
     axios
@@ -114,30 +114,31 @@ export default class PostItem extends Component {
                 onChange={this.handleChange}
             />
           </div>
+          {/*<br></br>*/}
+          {/*<div className="itemInfo">*/}
+          {/*  <label>Condition: </label>*/}
+          {/*  <input*/}
+          {/*      name='itemCondition'*/}
+          {/*      placeholder='item condition'*/}
+          {/*      value={this.state.itemCondition}*/}
+          {/*      onChange={this.handleChange}*/}
+          {/*  />*/}
+          {/*</div>*/}
           <br></br>
           <div className="itemInfo">
-            <label>Condition: </label>
-            <input
-                name='itemCondition'
-                placeholder='item condition'
-                value={this.state.itemCondition}
-                onChange={this.handleChange}
-            />
+            <label>Condition:
+              <select
+                  name='itemCondition'
+                  value={this.state.itemCondition}
+                      onChange={this.handleChange}>
+                <option value="NEW">NEW</option>
+                <option value="LIKENEW">LIKENEW</option>
+                <option value="GOOD">GOOD</option>
+                <option value="FAIR">FAIR</option>
+                <option value="POOR">POOR</option>
+              </select>
+            </label>
           </div>
-          {/*<div>*/}
-          {/*  <label>Condition:*/}
-          {/*    <select*/}
-          {/*        name='itemCondition'*/}
-          {/*        value={this.state.itemCondition}*/}
-          {/*            onChange={this.handleChange}>*/}
-          {/*      <option value="NEW">NEW</option>*/}
-          {/*      <option value="LIKENEW">LIKENEW</option>*/}
-          {/*      <option value="GOOD">GOOD</option>*/}
-          {/*      <option value="FAIR">FAIR</option>*/}
-          {/*      <option value="POOR">POOR</option>*/}
-          {/*    </select>*/}
-          {/*  </label>*/}
-          {/*</div>*/}
           <br></br>
           <div className="itemInfo">
             <label>Zipcode: </label>
